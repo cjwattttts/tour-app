@@ -1,5 +1,3 @@
-//App.jsx Created
-
 import React, { useState, useEffect } from 'react';
 import Gallery from './components/Gallery';
 import './styles/styles.css';
@@ -10,7 +8,8 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://course-api.com/react-tours-project")
+    // Use a CORS proxy to bypass the CORS issue
+    fetch("https://cors-anywhere.herokuapp.com/https://course-api.com/react-tours-project")
       .then((response) => response.json())
       .then((data) => {
         setTours(data);
