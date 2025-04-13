@@ -1,22 +1,24 @@
 /* global styles */
 .app {
-    font-family: arial, sans-serif;
-    text-align: center; /* center the text */
-    margin: 20px;
-    background-color: #2c2c2c; /* dark gray background */
-    color: #1e3a8a; /* blue text color */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: #333333; /* dark background for better contrast */
+    color: #ffffff; /* light text color for better readability */
     display: flex;
     flex-direction: column;
-    align-items: center; /* center everything horizontally */
-    justify-content: center; /* center everything vertically */
-    min-height: 100vh; /* full screen height */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure full viewport height */
   }
   
   /* heading style */
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: #1e3a8a; /* blue for heading */
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center; /* Center the title horizontally */
+    font-weight: 700; /* Bolder title */
   }
   
   /* gallery styles */
@@ -25,7 +27,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin-top: 20px;
+    padding: 0 20px;
   }
   
   /* individual tour card styling */
@@ -33,40 +35,49 @@
     background-color: #444444; /* dark gray for cards */
     border-radius: 15px; /* rounded corners */
     padding: 20px;
-    width: 250px;
+    width: 220px; /* Slightly larger for better alignment */
     text-align: left;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* soft shadow for modern look */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* soft shadow for modern look */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    overflow: hidden; /* Ensures no content overflows */
   }
   
   /* hover effect for cards */
   .tour-card:hover {
     transform: translateY(-5px); /* slight lift effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* deeper shadow on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); /* deeper shadow on hover */
   }
   
   /* image styles inside cards */
   .tour-card img {
     width: 100%;
-    border-radius: 15px; /* rounded corners for images */
-    max-width: 100%; /* ensure image doesn't overflow */
-    height: auto;
+    height: 150px;
+    object-fit: cover; /* Ensure images cover the space */
+    border-radius: 10px; /* rounded corners for images */
+    margin-bottom: 15px;
   }
   
   /* tour card title */
   .tour-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 10px 0;
     color: #ffffff; /* white text for better contrast */
+    font-weight: 600;
   }
   
   /* description text */
   .tour-card p {
     font-size: 1rem;
     color: #d1d1d1; /* lighter gray for text */
+    margin-bottom: 15px;
+  }
+  
+  /* price styling */
+  .tour-card .price {
+    font-size: 1.2rem;
+    color: #1e3a8a; /* Highlight price with blue */
+    font-weight: 700;
+    margin-top: 10px;
   }
   
   /* button style for "not interested" */
@@ -80,7 +91,8 @@
     transition: background-color 0.3s ease;
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 10px; /* space between button and other elements */
+    width: 100%;
+    font-size: 1rem;
   }
   
   /* hover effect for the remove button */
@@ -101,7 +113,7 @@
     }
   
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
   
     .remove-btn {
