@@ -17,7 +17,7 @@ function App() {
         setLoading(false);
       })
       .catch((err) => {
-        setError("Failed to fetch tours");
+        setError("Failed to fetch tours"); // Handle error
         setLoading(false);
       });
   }, []);
