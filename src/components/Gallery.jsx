@@ -1,3 +1,5 @@
+//Gallery.jsx Created
+
 import React from 'react';
 import TourCard from './TourCard';
 
