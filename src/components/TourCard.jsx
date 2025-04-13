@@ -1,3 +1,5 @@
+//TourCard.jsx Created
+
 import React, { useState } from 'react';
 
 function TourCard({ id, name, info, price, image, onRemove }) {
