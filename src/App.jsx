@@ -9,8 +9,7 @@ function App() {
 
   useEffect(() => {
     // Use a CORS proxy to bypass the CORS issue
-    fetch("https://cors-anywhere.herokuapp.com/https://course-api.com/react-tours-project")
-      .then((response) => response.json())
+      fetch("https://course-api.com/react-tours-project")
       .then((data) => {
         setTours(data);
         setLoading(false);
